@@ -1,21 +1,21 @@
 # -*- encoding: binary -*-
 ENV["VERSION"] or abort "VERSION= must be specified"
-manifest = File.readlines('.manifest').map! { |x| x.chomp! }
+# manifest = File.readlines('.manifest').map! { |x| x.chomp! }
 require 'olddoc'
 extend Olddoc::Gemspec
-name, summary, title = readme_metadata
+# name, summary, title = readme_metadata
 
 Gem::Specification.new do |s|
   s.name = %q{rainbows}
   s.version = ENV["VERSION"].dup
 
   s.authors = ["#{name} hackers"]
-  s.description = readme_description
+  s.description = "aaaaaaaaaaaaaaaaaaaaaaa"
   s.email = %q{rainbows-public@bogomips.org}
   s.executables = %w(rainbows)
-  s.extra_rdoc_files = extra_rdoc_files(manifest)
-  s.files = manifest
-  s.homepage = Olddoc.config['rdoc_url']
+  s.extra_rdoc_files = []
+  s.files = []
+  s.homepage = "aaaaaaaaaaaaaa"
   s.summary = summary
 
   # we want a newer Rack for a valid HeaderHash#each
