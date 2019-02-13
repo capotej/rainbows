@@ -10,11 +10,11 @@ Gem::Specification.new do |s|
   s.version = '5.1.2'
 
   s.authors = ["#{name} hackers"]
-  s.description = readme_description
+  s.description = "a"
   s.email = %q{rainbows-public@bogomips.org}
   s.executables = %w(rainbows)
-  s.extra_rdoc_files = extra_rdoc_files(manifest)
-  s.files = manifest
+  s.extra_rdoc_files = []
+  s.files = []
   s.homepage = Olddoc.config['rdoc_url']
   s.summary = summary
 
