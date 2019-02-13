@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.executables = %w(rainbows)
   s.extra_rdoc_files = []
   s.files = []
-  s.homepage = "aaaaaaaaaaaaaa"
+  s.homepage = "https://github.com/capotej/rainbows"
   s.summary = "aaaaaaaaaaaaaaa"
 
   # we want a newer Rack for a valid HeaderHash#each
