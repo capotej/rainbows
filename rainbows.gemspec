@@ -1,22 +1,21 @@
 # -*- encoding: binary -*-
-ENV["VERSION"] or abort "VERSION= must be specified"
-# manifest = File.readlines('.manifest').map! { |x| x.chomp! }
-require 'olddoc'
-extend Olddoc::Gemspec
-# name, summary, title = readme_metadata
-
+manifest = File.exist?('.manifest') ?
+  IO.readlines('.manifest').map!(&:chomp!) : `git ls-files`.split("\n")
+  
 Gem::Specification.new do |s|
   s.name = %q{rainbows}
-  s.version = ENV["VERSION"].dup
+  s.version = (ENV["VERSION"] || '5.1.1').dup
 
-  s.authors = ["hackers"]
-  s.description = "aaaaaaaaaaaaaaaaaaaaaaa"
+  s.authors = ['Rainbows! hackers']
+  s.description = File.read('README').split("\n\n")[1]
   s.email = %q{rainbows-public@bogomips.org}
   s.executables = %w(rainbows)
-  s.extra_rdoc_files = []
-  s.files = []
-  s.homepage = "https://github.com/capotej/rainbows"
-  s.summary = "aaaaaaaaaaaaaaa"
+  s.extra_rdoc_files = IO.readlines('.document').map!(&:chomp!).keep_if do |f|
+    File.exist?(f)
+  end
+  s.files = manifest
+  s.homepage = 'https://bogomips.org/rainbows/'
+  s.summary = 'Rack app server for sleepy apps and slow clients'
 
   # we want a newer Rack for a valid HeaderHash#each
   s.add_dependency(%q<rack>, ['>= 1.1', '< 3.0'])
