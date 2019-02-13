@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.name = %q{rainbows}
   s.version = ENV["VERSION"].dup
 
-  s.authors = ["#{name} hackers"]
+  s.authors = ["hackers"]
   s.description = "aaaaaaaaaaaaaaaaaaaaaaa"
   s.email = %q{rainbows-public@bogomips.org}
   s.executables = %w(rainbows)
