@@ -1,5 +1,5 @@
 # -*- encoding: binary -*-
-ENV["VERSION"] or abort "VERSION= must be specified"
+# ENV["VERSION"] or abort "VERSION= must be specified"
 manifest = File.readlines('.manifest').map! { |x| x.chomp! }
 require 'olddoc'
 extend Olddoc::Gemspec
@@ -7,7 +7,7 @@ name, summary, title = readme_metadata
 
 Gem::Specification.new do |s|
   s.name = %q{rainbows}
-  s.version = ENV["VERSION"].dup
+  s.version = '5.1.2'
 
   s.authors = ["#{name} hackers"]
   s.description = readme_description
