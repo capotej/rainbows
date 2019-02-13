@@ -37,6 +37,7 @@ module Rainbows::XEpoll::Client
 
   # only call this once
   def epoll_once
+    logger.info "JULIO: epoll_once"
     @wr_queue = [] # may contain String, ResponsePipe, and StreamFile objects
     post_init
     EP.set(self, IN) # wake up the main thread
