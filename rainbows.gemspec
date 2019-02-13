@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = []
   s.files = []
   s.homepage = "aaaaaaaaaaaaaa"
-  s.summary = summary
+  s.summary = "aaaaaaaaaaaaaaa"
 
   # we want a newer Rack for a valid HeaderHash#each
   s.add_dependency(%q<rack>, ['>= 1.1', '< 3.0'])
